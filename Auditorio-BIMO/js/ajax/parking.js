@@ -1,10 +1,10 @@
 var Parking = (function($) {
-    var baseUrl = "https://apis.bimo.com/parkingapi";
     var apikey = "?api_key=" + GlobalConfig.apikey;
-
+    var port = "5002";
+    var endpoint = "cajones";
     var cajonesPorFuncion = function(funcion_id, cb) {
         $.ajax({
-            url: baseUrl + `/cajones-ocupados/${funcion_id}`+ apikey
+            url:  `${GlobalConfig.host}:${port}/${endpoint}/cajones-ocupados/${funcion_id}`+ apikey
         }).done(function(resp) {
             cb(resp);
         }).fail(function(){
@@ -14,7 +14,7 @@ var Parking = (function($) {
 
     var reservarCajon = function(id_funcion, no_tarjeta, num_cajon, cb) {
         $.ajax({
-            url: baseUrl + `/add/${id_funcion}/${no_tarjeta}/${num_cajon}`+ apikey
+            url:  `${GlobalConfig.host}:${port}/${endpoint}/add/${id_funcion}/${no_tarjeta}/${num_cajon}`+ apikey
         }).done(function(resp) {
             cb(resp);
         }).fail(function(){

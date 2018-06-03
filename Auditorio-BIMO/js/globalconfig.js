@@ -1,3 +1,4 @@
 const GlobalConfig = {
-    apikey: "np5jlomgamUPXSj2TQOqhQMbxlRjSDDjMA9M2Mqu"
+    apikey: "np5jlomgamUPXSj2TQOqhQMbxlRjSDDjMA9M2Mqu",
+    host: "http://localhost"
 };

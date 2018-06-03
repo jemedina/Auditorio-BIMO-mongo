@@ -1,9 +1,10 @@
 var Promociones = (function($) {
-    var baseUrl = "https://apis.bimo.com/promosapi";
     var apikey = "?api_key=" + GlobalConfig.apikey;
+    var port = "5001";
+    var endpoints = "promos";
     var getAll = function(cb) {
         $.ajax({
-            url: baseUrl + "/all" + apikey,
+            url:  `${GlobalConfig.host}:${port}/${endpoint}/all?api_key=${GlobalConfig.apikey}`,
             method: "get",
             async: true,
             success: function(data) {
