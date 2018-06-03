@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Terminal de Boletos</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">-->
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/enjoyhint.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/mainstyles.css" rel="stylesheet">
+  <script src="js/globalconfig.js"></script>
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Hero Section
+  ============================--> 
+  
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+         <img class="logo" src="img/logo2.png" alt="Imperial">   
+                 <span id="liveclock" style="display: inline;top:0; color: white;"></span><script language="JavaScript" type="text/javascript">
+  
+                function show5(){
+                if (!document.layers&&!document.all&&!document.getElementById)
+                    return
+
+                var Digital=new Date()
+                var hours=Digital.getHours()
+                var minutes=Digital.getMinutes()
+                var seconds=Digital.getSeconds()
+                if (minutes<=9)
+                    minutes="0"+minutes
+                    if (seconds<=9)
+                        seconds="0"+seconds
+                            //change font size here to your desire
+                    myclock="<font size='5' face='Arial' >"+hours+":"+minutes+"</b></font>"
+                    if (document.layers){
+                        document.layers.liveclock.document.write(myclock)
+                        document.layers.liveclock.document.close()
+                    }
+                    else if (document.all)
+                        liveclock.innerHTML=myclock
+                    else if (document.getElementById)
+                        document.getElementById("liveclock").innerHTML=myclock
+                        setTimeout("show5()",1000)
+                    }
+                    window.onload=show5
+                //-->
+                </script>  
+        </div>
+         <h1>Bienvenido</h1>
+         <h2>Le ofrecemos <span class="rotating">los mejores eventos, el mejor servicio, la mejor atención</span></h2>
+         <section id="portfolio"> 
+             <div class="row">
+                <div class="col-xs-2 col-xs-offset-1">
+                  <a class="ticketbutton portfolio-item" href="views/eventos.html">
+                    <img src="img/boletos.png" style="padding-left: 5px; padding-right: 5px;     margin-bottom: 30px;" alt="">
+                    <span>Eventos</span>
+                  </a> 
+                </div> 
+                <div class="col-xs-2">
+                  <a class="portfolio-item"  href="views/search2.html">
+                      <img src="img/parking.png" style="padding-left: 5px; padding-right: 5px;     margin-bottom: 32px;" alt="">
+                      <span>Aparcamiento</span>
+                  </a>
+                </div> 
+                <div class="col-xs-2">
+                  <a class="portfolio-item"  href="views/canjear.html">
+                      <img src="img/promociones.png" style="padding-left: 5px; padding-right: 5px;     margin-bottom: 15px;" alt="">
+                      <span>Promos</span>
+                  </a>
+                </div> 
+                <div class="col-xs-2">
+                  <a class="portfolio-item" href="views/search.html">
+                      <img src="img/eventos.png" style="padding-left: 25px; padding-right: 25px;margin-bottom: 8px;" alt="">
+                      <span>Consultas</span>
+                  </a>
+                </div>  
+                <div class="col-xs-2">
+                  <a class="portfolio-item" href="views/galeria.html">
+                      <img src="img/galeria.png" style="padding-left: 10px; padding-right: 10px;margin-bottom: 26px;" alt="">
+                      <span>Galería</span>
+                  </a>
+                </div>
+             </div>     
+          </section>
+      </div>
+    </div>
+  </section> 
+  
+  <footer>
+    <img id="helpbutton" onclick="showInitialSteps()" src="img/helpbtn.png">
+    <audio id="audio" src="audio/index.mp3" ></audio>
+  </footer> 
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+  <script src="js/enjoyhint.min.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+  <script>
+  document.addEventListener('contextmenu', event => event.preventDefault());  
+  </script>
+
+</body>
+
+</html>

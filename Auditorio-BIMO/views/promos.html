@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consulta reservacion</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Consultas" />
+<script src="../js/globalconfig.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../css/promos.css" rel='stylesheet' type='text/css'  >
+<!-- //for-mobile-apps -->
+<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="../css/animate.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="../css/search.css" rel='stylesheet' type='text/css' />
+<link href="../css/teclado.css" rel='stylesheet' type='text/css' />
+<link href="../css/enjoyhint.css" rel="stylesheet"> 
+<link rel="stylesheet" href="../css/jquery-ui.css" type='text/css' />
+<link rel="stylesheet" href="../css/smoothbox.css" type='text/css' >
+<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+<!-- //Custom Theme files -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+<script type="text/javascript" src="../lib/jquery/move-top.js"></script>
+<script type="text/javascript" src="../lib/jquery/easing.js"></script>
+<script src="../js/ajax/promociones.js"></script>
+<script src="../js/promociones.js"></script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+<body>
+<script src="../lib/jquery/jquery.vide.min.js"></script>
+	<div data-vide-bg="../video/gradas">
+		<div class="center-container">
+			<div class="navigation">
+				<div class="container">
+					<div class="encabezado">
+						<h1>Lista de Promociones</h1>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="w3ls_banner_info">
+				<div class="container">
+				<table class="responstable" id="promosTable">
+				  <tr>
+                    <th>Promoción</th>
+                    <th>Vigencia</th>
+                    <th></th>
+                  </tr>
+
+            </table>
+             
+				    
+        </div> 
+        
+        <div class="inferior"> 
+                        <img id="helpbutton" onclick="ayuda_aplicar()"  class="helpbutton"  style="margin-top: 180px;" src="../img/helpbtn.png">
+                        <audio id="audio" src="../audio/aplicar.mp3" ></audio>
+                        <a href="../index.html" class="btn" style="margin-top: 50px;" id="homeBtn">
+                        <i class="fas fa-home fa-4x"></i>
+                        <br/>Regresar
+                        </a>   
+                </div> 
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+<!-- for bootstrap working -->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());  
+  </script>
+<!-- //here ends scrolling icon -->
+<script src="../js/main.js"></script> 
+<script src="../js/enjoyhint.min.js"></script>
+<script src="../js/teclado.js"></script>
+</body>
+</html>

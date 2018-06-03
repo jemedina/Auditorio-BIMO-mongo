@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/dist/styles/jquery.carousel-3d.default.css">
+  <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/parking.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link href="../css/enjoyhint.css" rel="stylesheet"> 
+  <!--<script src="http://localhost:35729/livereload.js"></script>-->
+  <script src="../js/globalconfig.js"></script>
+  <script src="../lib/bower_components/jquery/jquery.js"></script>
+  <script src="../lib/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+  <script src="../lib/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+  <script src="../lib/bower_components/modernizr/modernizr.js"></script>
+  <script src="../css/dist/jquery.carousel-3d.js"></script>
+  <script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+
+  <style>
+    html,
+    body {
+      margin: 0px;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    div {
+      font-family: "Open Sans", sans-serif;
+      font-size: 11pt;
+    }
+  </style>
+</head>
+
+<body id="parking">
+  <div class="hero-container">
+    <div class="parkingWrapper">
+      <div class="column column0">
+        <div class="subcolumn0 c0">
+        </div>
+      </div>
+      <div class="column column1">
+        <div class="fila fila0 fila1 c1">
+        </div>
+        <div class="fila fila0"></div>
+        <div class="fila fila0">
+          <div class="subfila0 c5"></div>
+        </div>
+        <div class="fila fila0">
+          <div class="subfila0 c6"></div>
+        </div>
+        <div class="fila fila0"></div>
+        <div class="fila fila0 fila1">
+          <div class="subfila1" style="float: left">
+           <div class="subsubfila0 c3">
+            </div>
+          </div>
+          <span style="font-size: 14pt;">Entrada del estacionamiento</span>
+          <div class="entrada">
+            
+            <div class="entradaBlock"><i class="fas fa-arrow-up fa-2x"></i></div>
+            <div class="entradaBlock"><i class="fas fa-arrow-down fa-2x"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="column column0">
+          <div class="subcolumn0 c2">
+          </div>        
+      </div> 
+      <img id="helpbutton" onclick="ayuda_parking()"  class="helpbutton"  style="display: inline-block; width: 120px; margin-top: -100%; margin-left: 101%;  margin-bottom: 400px; position: relative;" src="../img/helpbtn.png">
+      <audio id="audio" src="../audio/parking.mp3" ></audio>
+
+      <div id="costoContainer">
+          <p>Costo por cajón:<p>
+          <br/>
+          <h1>$80.00</h1>
+        </div>
+    </div>
+    <div class="parkingInfo">
+      <div class="parkingColors">
+        <div class="infoDisp">
+          <div class="infoLabel"> Disponible:</div> 
+          <div class="cajonInfo cajonDispDemo"></div>
+        </div>
+        <div class="infoNoDisp">
+          <div class="infoLabel">No Disponible:</div> 
+          <div class="cajonInfo cajonNoDispDemo"></div>
+        </div>
+        <div class="infoDisc">
+          <div class="infoLabel">Discapacitados:<br>(No se pueden<br>reservar)</div> 
+          <div class="cajonInfo cajonDisc"><br/><i class="fas fa-wheelchair fa-3x"></i></div>
+        </div>
+      </div>
+      <div class="parkingSelected">
+        <h2>Cajón seleccionado:</h2>
+        <span id="selectedCajon">--</span>
+        <div class="more">
+          <a id="pagoBtn" href="pago_estacionamiento.html" class="hvr-underline-from-center">Reservar</a>
+        </div>
+      </div>
+    </div>
+   
+            <a href="../index.html" class="btn" id="homeBtn">
+                <i class="fas fa-home fa-4x"></i>
+                <br/>Regresar
+            </a>   
+  </div>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());  
+  </script>
+  <script src="../js/main.js"></script> 
+  <script src="../js/enjoyhint.min.js"></script>
+  <script src="../js/ajax/parking.js"></script>
+  <script src="../js/parking.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consulta reservacion</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Consultas" />
+<script src="../js/globalconfig.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="../css/animate.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="../css/search.css" rel='stylesheet' type='text/css' />
+<link href="../css/teclado.css" rel='stylesheet' type='text/css' />
+<link href="../css/enjoyhint.css" rel="stylesheet"> 
+<link rel="stylesheet" href="../css/jquery-ui.css" type='text/css' />
+<link rel="stylesheet" href="../css/smoothbox.css" type='text/css' >
+<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+<!-- //Custom Theme files -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+<script type="text/javascript" src="../lib/jquery/move-top.js"></script>
+<script type="text/javascript" src="../lib/jquery/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+<body>
+<script src="../lib/jquery/jquery.vide.min.js"></script>
+	<script src="js/jquery.vide.min.js"></script>
+	<div data-vide-bg="../video/video">
+		<div class="center-container">
+			<div class="navigation">
+				<div class="container">
+					<div class="logo">
+						<h1>Consultas</h1>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="w3ls_banner_info">
+				<div class="container">
+					<div class="w3l_banner_logo">
+						<img class="w3l_banner_logo" src="../img/logo2.png" alt="Imperial">  
+					</div>
+					<form action="#" method="post">
+				    <input class="busqueda" id="numBox" type="text" maxlength="16" name="No_tarjeta" placeholder="Ingrese su número de tarjeta de credito" required=true>
+				    <div class="more">
+						<a href="" onclick="sacartarjeta()" class="hvr-underline-from-center">Buscar</a>
+					</div>
+				    </form>
+				    
+				</div> 
+				
+				 <div class="inferior"> 
+                        <img id="helpbutton" onclick="ayuda_search()"  class="helpbutton" src="../img/helpbtn.png">
+                        <audio id="audio" src="../audio/search.mp3" ></audio>
+                        <a href="../index.html" class="btn" id="homeBtn">
+                        <i class="fas fa-home fa-4x"></i>
+                        <br/>Regresar
+                        </a>   
+                </div>
+
+			</div>
+    <table id="kb_keypad" class="animated infinite bounce">
+        <tr>
+            <td class="kb_key">1</td>
+            <td class="kb_key">2</td>
+            <td class="kb_key">3</td>
+        </tr>
+        <tr>
+            <td class="kb_key">4</td>
+            <td class="kb_key">5</td>
+            <td class="kb_key">6</td>
+        </tr>
+        <tr>
+            <td class="kb_key">7</td>
+            <td class="kb_key">8</td>
+            <td class="kb_key">9</td>
+        </tr>
+        <tr>
+            <td class="kb_btn kb_btn_delete">Borrar</td>
+            <td class="kb_key">0</td>
+            <td class="kb_btn kb_btn_ok">Ok</td>
+        </tr>
+    </table>
+		</div>
+
+	</div>
+
+
+
+
+<!-- for bootstrap working -->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());  
+  </script>
+  <script>
+      function sacartarjeta(){
+       console.log("",$("#numBox").val());   
+       $(".hvr-underline-from-center").attr("href","reservaciones.html?no_tarjeta="+$("#numBox").val())
+      }
+  </script>
+<!-- //here ends scrolling icon -->
+<script src="../js/main.js"></script> 
+<script src="../js/enjoyhint.min.js"></script>
+<script src="../js/teclado.js"></script>
+</body>
+</html>

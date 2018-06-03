@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/dist/styles/jquery.carousel-3d.default.css">  <link rel="stylesheet" href="../css/mainstyles.css">
+  <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+
+  <script src="../js/globalconfig.js"></script>
+  <script src="../lib/bower_components/jquery/jquery.js"></script>
+  <script src="../lib/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+  <script src="../lib/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+  <script src="../lib/bower_components/modernizr/modernizr.js"></script>
+  <script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+  <script src="../js/ajax/eventos.js" type="text/javascript"></script>
+  <script src="../js/reservaciones.js" type="text/javascript"></script>
+
+  <style>
+    html,
+    body {
+      margin: 0px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .wrapper {
+      width: 100%;
+    } 
+      
+    #fondo {
+      display: table;
+      width: 100%;
+      height: 150vh;
+      background: url(img/frente3.jpg) top center fixed;
+      background-size: cover;
+      padding-top: 0px;     
+      filter: grayscale(50%);  
+      overflow-y: scroll;  
+      overflow: hidden; 
+      } 
+     
+    #fondo .hero-container {
+      background: rgba(0, 0, 0, 0.5);
+      display: table-cell;
+      text-align: center;
+    } 
+    *,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+      -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    }
+
+    body {
+      background: #f6f8f8;
+      font-size: 100%;
+      padding: 3em 0;
+    }
+
+    .promos {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .promo {
+      padding: .25em 0 2em;
+      background: #0F1012;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: #f9f9f9;
+      text-align: center;
+    }
+
+    .promo h4 {
+      margin: .25em 0 0;
+      font-size: 170%;
+      font-weight: normal;
+    }
+
+    .promo .features {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      color: #999999;
+    }
+
+    .promo li {
+      padding: .25em 0;
+    }
+
+    .promo .brief {
+      color: #f9f9f9;
+    }
+
+    .promo .price {
+      margin: .5em 0;
+      padding: .25em 0;
+      background: #292b2e;
+      font-size: 250%;
+      color: #f9f9f9;
+    }
+
+    .promo .buy {
+      margin: 1em 0 0;
+    }
+
+    .promo button {
+      padding: 1em 3.25em;
+      border: none;
+      border-radius: 40px;
+      background: #292b2e;
+      color: #f9f9f9;
+      cursor: pointer;
+    }
+
+    .promo button:hover {
+      background: #4e8d88; 
+    }
+
+    .scale button {
+      background: #64AAA4;
+    }
+
+    .scale button:hover {
+      background: #4e8d88;
+    }
+
+    @media (min-width: 40em) {
+      .scale {
+        transform: scale(1.2);
+        box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
+      }
+      .scale .price {
+        color: #64AAA4;
+      }
+    } 
+      
+ p[id^="pProgress"] {
+  font-size: 12px !important;
+  font-weight: bold;
+  display: inline;
+  margin: 50%;
+  padding: 0 0 0 10px;
+  color: #a00;
+}
+progress[id="progress3"] {
+  display: none;
+  -webkit-appearance: none;
+  width: 90%; 
+  height: 10px;  
+  margin-left: 2%; 
+  margin-top: 10px;
+}
+
+progress[id="progress3"]::-webkit-progress-bar {
+  background: black;
+  border-radius: 50px;
+  padding: 2px;
+}
+progress[id="progress3"]::-moz-progress-bar {
+  background: black;
+  border-radius: 50px;
+  padding: 2px;
+}
+
+progress[id="progress3"]::-webkit-progress-value {
+  border-radius: 50px;
+  background: dodgerblue;
+}
+/*#carousel-container div{visibility: hidden;}*/
+
+  </style>
+</head>
+
+<body id="fondo">
+  <div class="hero-container">
+    <div class="wrapper">
+      <div data-carousel-3d id="carousel-container">
+       
+      </div>
+    </div>
+     <progress id='progress3' max='100' value='0'></progress>
+    <a href="../index.html" class="btn" style="margin-top: 20px; ">
+      <i class="fas fa-home fa-4x"></i>
+      <br> Regresar</a>
+  </div>
+  
+  <script> 
+       // tiempo de actualizacion del progress
+    TIME = 60;
+
+    // tag progress y el parrafo
+    
+    progress = document.getElementById("progress3");
+    
+    // obtengo el valor maximo
+    max = progress.max;
+
+    // aumenta progresivamente el valor del meter
+    var loading = false;
+    function functionProgress3(i, x) {
+        if(!loading){
+          // actualizo
+          function decrementar(i) {
+            console.log("Counting", i);
+            progress.value = i;
+            if (i >= max){
+                console.log("i->",i," max->",max);
+                $('#progress3').hide();  
+                loading = false;
+            }
+              if(i < max)
+              setTimeout(function() { decrementar(i + 1) }, TIME);
+          }
+
+         $('#progress3').show();  
+          loading = true;
+          $(x).hide(); 
+          decrementar(0);
+        }
+          // decremento el valor de i al minimo
+          
+          
+           
+            
+
+        
+            
+            
+        
+    }  
+  </script>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());  
+  </script>
+</body>
+
+</html>

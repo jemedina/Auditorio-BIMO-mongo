@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SECCIONES</title>
+    <link rel="stylesheet" href="../css/secciones.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../js/globalconfig.js"></script>
+    <script src="../lib/bower_components/jquery/jquery.js"></script>
+    <script src="../lib/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+    <script src="../lib/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+    <script src="../lib/bower_components/modernizr/modernizr.js"></script>
+    <script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+    <script src="../css/dist/jquery.carousel-3d.js"></script>
+</head>
+
+<body id="escenario">
+    <div class="hero-container">
+        <div class="prin">
+            <div class="escenario">
+                ESCENARIO
+
+            </div>
+            <div class="area1" onclick="direccion('A1')">
+                <p id="A1">A1</p>
+            </div>
+            <div class="area1" onclick="direccion('A2')">
+                <p id="A2">A2</p>
+            </div>
+            <div class="area1" onclick="direccion('A3')">
+                <p id="A3">A3</p>
+            </div>
+            <br>
+            <div class="area2" onclick="direccion('B1')">
+                <p id="B1">B1</p>
+            </div>
+            <div class="area2" onclick="direccion('B2')">
+                <p id="B2">B2</p>
+            </div>
+        <h3 style="margin-left: 20%; margin-top: 10px;">*Seleccione una de las siguientes secciones para pasar a la selección de asientos.</h3>    
+        </div>
+        <a onclick="backToEventos()" class="btn2" id="homeBtn">
+            <i class="fas fa-home fa-4x"></i>
+            <br/>Regresar
+        </a>
+    </div>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        function backToEventos() {
+            if(window.location.search.indexOf('&folio_artista') >= 0) {
+                var searchParams = window.location.search.split('&folio_artista')[0];
+                window.location='eventos.html'+searchParams;
+            } else {
+                window.location='eventos.html';
+            }
+        }
+    </script>
+</body>
+<script type="text/javascript" src="../js/secciones.js"></script>
+</html>

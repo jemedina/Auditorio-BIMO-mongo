@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consulta reservacion</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Consultas" />
+<script src="../js/globalconfig.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="../css/animate.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+
+<link href="../css/pagos.css" rel='stylesheet' type='text/css'  /> 
+<link href="../css/teclado.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="../css/jquery-ui.css" type='text/css' />
+<link rel="stylesheet" href="../css/smoothbox.css" type='text/css' >
+<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+<link href="../css/enjoyhint.css" rel="stylesheet" type='text/css'> 
+<!-- //Custom Theme files -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+<script type="text/javascript" src="../lib/jquery/move-top.js"></script>
+<script type="text/javascript" src="../lib/jquery/easing.js"></script>
+<script src="../js/teclado.js"></script>
+<script src="../js/ajax/eventos.js"></script>
+<script src="../js/pagar_boletos.js"></script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+<body>
+<script src="../lib/jquery/jquery.vide.min.js"></script>
+	<script src="../lib/jquery.vide.min.js"></script>
+	<div data-vide-bg="../video/wall">
+		<div class="center-container">
+			<div class="navigation">
+				<div class="container">
+					<div class="logo">
+						<h1>Pago de Entradas</h1>
+					</div>
+				</div>
+			</div>
+			<div class="w3ls_banner_info">
+				<div class="container">
+					
+                    <div id="area">
+  <div class="master-card">
+    <div class="card">
+      <div class="title">Ingrese los siguientes datos de su tarjeta</div>
+      <div class="input-number"><span class="title-number">No. tarjeta</span>
+        <div class="inputs-number">
+          <input type="text" id ="number-card1" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+          <input type="text" id ="number-card2" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+          <input type="text" id ="number-card3" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+          <input type="text" id ="number-card4" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+        </div>
+        <div class="selects-date selecters">
+          <div class="month-select"><span>Mes</span>
+            <select id="dates">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">9</option>
+              <option value="">10</option>
+              <option value="">11</option>
+              <option value="">12</option>
+            </select>
+          </div>
+          <div class="year-select"><span>Año</span>
+            <select id="dates">
+              <option value="">17</option>
+              <option value="">18</option>
+              <option value="">19</option>
+              <option value="">20</option>
+              <option value="">21</option>
+              <option value="">22</option>
+              <option value="">23</option>
+              <option value="">24</option>
+              <option value="">25</option>
+              <option value="">26</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="mark-gold">
+        <div class="round">
+          <div class="circles">
+            <div class="circle-1"> </div>
+            <div class="circle-2"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="name" hidden><span>JEAN O IMPSUM</span></div>
+    </div>
+    <div class="card-back">
+      <div class="tire"></div>
+      <div class="secret-area">
+        <input type="text" id="card-cvc" maxlength="4" name="number-card" placeholder="Últimos 4 digitos de su tarjeta: XXXX" required="required"/>
+      </div>
+      <div class="chip-card"></div>
+    </div>
+  </div>
+  <div class="button-sent">
+    <button id="back">Girar</button>
+    <button id="continue">Continuar</button>
+  </div>
+  
+  <div class="popup">
+	<h2>Desea reservar espacio de estacionamiento para este evento?</h2>
+	<button name="go">Sí, ir a la selección de cajón.</button><br>
+	<button name="close">No, regresar a la pantalla de inicio. </button>
+</div>
+</div>
+				    
+				    				    
+</div>
+
+			</div>
+			<div class="inferior"> 
+                        <img id="helpbutton" onclick="ayuda_pagos()"  class="helpbutton" src="../img/helpbtn.png">
+                         <progress id='progress3' max='100' value='0'></progress>
+                         <h2 id="progress3_label">Imprimiendo ticket...</h2>
+                        <audio id="audio" src="../audio/pagos.mp3" ></audio>
+                        <a href="../index.html" class="btn" id="homeBtn">
+                        <i class="fas fa-home fa-4x"></i>
+                        <br/>Regresar
+                        </a>   
+                </div>
+    <table id="kb_keypad" class="animated infinite bounce">
+        <tr>
+            <td class="kb_key">1</td>
+            <td class="kb_key">2</td>
+            <td class="kb_key">3</td>
+        </tr>
+        <tr>
+            <td class="kb_key">4</td>
+            <td class="kb_key">5</td>
+            <td class="kb_key">6</td>
+        </tr>
+        <tr>
+            <td class="kb_key">7</td>
+            <td class="kb_key">8</td>
+            <td class="kb_key">9</td>
+        </tr>
+        <tr>
+            <td class="kb_btn kb_btn_delete">Borrar</td>
+            <td class="kb_key">0</td>
+            <td class="kb_btn kb_btn_ok">Ok</td>
+        </tr>
+    </table>
+		</div>
+
+	</div>
+
+  <script> 
+
+</script>
+
+
+<!-- for bootstrap working -->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());  
+  </script> 
+  
+
+<!-- //here ends scrolling icon -->
+<script src="../js/main.js"></script> 
+<script src="../js/enjoyhint.min.js"></script>
+</body>
+</html>

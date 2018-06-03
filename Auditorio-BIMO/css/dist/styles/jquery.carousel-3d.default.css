@@ -1,0 +1,260 @@
+::-webkit-scrollbar {
+display: none;
+} 
+
+#hero {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(/Auditorio-BIMO/Auditorio-BIMO/views/img/frente4.jpg) top center fixed;
+  background-size: cover;
+  padding-top: 0px;     
+  filter: grayscale(50%);  
+  overflow-y: scroll;  
+  overflow: hidden; 
+} 
+
+#hero .hero-container {
+  background: rgba(0, 0, 0, 0.5);
+  display: table-cell;
+  text-align: center;
+} 
+
+#fondo {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(/Auditorio-BIMO/Auditorio-BIMO/views/img/escenario.jpg) top center fixed;
+  background-size: cover;
+  padding-top: 0px;     
+  filter: grayscale(50%);  
+  overflow-y: scroll;  
+  overflow: hidden; 
+} 
+
+#fondo .hero-container {
+  background: rgba(0, 0, 0, 0.5);
+  display: table-cell;
+  text-align: center;
+} 
+
+#fondo_estacionamiento {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(/Auditorio-BIMO/Auditorio-BIMO/views/img/estacionamiento2.jpg) top center fixed;
+  background-size: cover;
+  padding-top: 0px;     
+  filter: grayscale(50%);  
+  overflow-y: scroll;  
+  overflow: hidden; 
+} 
+
+#fondo_estacionamiento .hero-container {
+  background: rgba(0, 0, 0, 0.5);
+  display: table-cell;
+  text-align: center;
+} 
+
+#fondo {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(/Auditorio-BIMO/Auditorio-BIMO/views/img/escenario.jpg) top center fixed;
+  background-size: cover;
+  padding-top: 0px;     
+  filter: grayscale(50%);  
+  overflow-y: scroll;  
+  overflow: hidden; 
+} 
+
+#fondo .hero-container {
+  background: rgba(0, 0, 0, 0.5);
+  display: table-cell;
+  text-align: center;
+} 
+
+#parking {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(/Auditorio-BIMO/Auditorio-BIMO/views/img/estacionamiento.jpg) top center fixed;
+  background-size: cover;
+  padding-top: 0px;     
+  filter: grayscale(50%);  
+  overflow-y: scroll;  
+  overflow: hidden; 
+} 
+
+#parking .hero-container {
+  background: rgba(0, 0, 0, 0.5);
+  display: table-cell;
+  text-align: center;
+} 
+
+/* line 3, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] [data-prev-button] {
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  top: 0px;
+  left: 0px;
+}
+/* line 10, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] [data-next-button] {
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  top: 0px;
+  right: 0px;
+}
+
+/* line 22, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] {
+  position: relative;
+  overflow: hidden;
+}
+/* line 26, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] > [data-children-wrapper] {
+  perspective: 3000px;
+  -ms-perspective: 3000px;
+  -moz-perspective: 3000px;
+  -webkit-perspective: 3000px;
+}
+/* line 32, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] > [data-children-wrapper] > [data-child] {
+  transition: 1s;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+}
+
+/* line 43, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px; 
+} 
+
+/* line 50, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] > [data-children-wrapper] > [data-child] {
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+/* line 59, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] > [data-children-wrapper] > [data-child] > [data-child-frame] > [data-content-wrapper] {
+  box-sizing: border-box;
+  transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  -moz-transform-origin: 0px 0px;
+  -webkit-transform-origin: 0px 0px;
+}
+
+/* line 75, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d]:before {
+  padding-top: 40%;
+  display: block;
+  content: '';
+}
+/* line 82, ../../styles/common/jquery.carousel-3d.scss */
+[data-carousel-3d] [data-children-wrapper] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 26%;
+  left: 26%;
+}
+
+/* line 9, ../../styles/theme/jquery.carousel-3d.default.scss */
+[data-carousel-3d] {
+  background: linear-gradient(0deg, #c8c8c8, white, #c8c8c8);
+  background: -ms-linear-gradient(0deg, #c8c8c8, white, #c8c8c8);
+  background: -moz-linear-gradient(0deg, rgba(200,200,200,0.5), rgba(255,255,255,0.5), rgba(200,200,200,0.5));
+  background: -webkit-linear-gradient(0deg, rgba(70,70,70,0.9), rgba(155,155,155,0.1), rgba(70,70,70,0.9));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+}
+
+/* line 19, ../../styles/theme/jquery.carousel-3d.default.scss */
+[data-carousel-3d] {
+  /*border: 3px solid #e0e0e0; */ 
+}
+
+/* line 26, ../../styles/theme/jquery.carousel-3d.default.scss */
+[data-carousel-3d] [data-prev-button]:before {
+  content: url("./images/default/prev.png");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 43px;
+  height: 49px;
+  margin: auto;
+  filter:invert(100%);
+}
+/* line 39, ../../styles/theme/jquery.carousel-3d.default.scss */
+[data-carousel-3d] [data-next-button]:before {
+  content: url("./images/default/next.png");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 43px;
+  height: 49px;
+  margin: auto;
+  filter:invert(100%);
+}
+
+/* line 53, ../../styles/theme/jquery.carousel-3d.default.scss */
+[data-child-frame] {
+  /*border: 2px solid #666; */ 
+}
+
+/*# sourceMappingURL=jquery.carousel-3d.default.css.map */
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  color: white;    
+  /*margin-bottom: 200px;*/
+  margin-top: 70px;
+  margin-left: 80%;
+  width: 120px;
+  height: 120px;
+  line-height: 30px;
+  border-radius: 50%;
+  border: solid 7px white;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.btn svg{
+    padding-top: 7px;
+}
+
+.btn:hover {
+    background: white;
+    color: dodgerblue;
+} 
+
+.tootltip_button {
+	color: black;
+	border: solid 1px gray;
+	background-color: white;
+	width: auto;
+	height: auto;
+	padding: 20px;
+}
+
+.tootltip_button:hover {
+	background-color: rgb(220,220,220);
+	color: black;
+}

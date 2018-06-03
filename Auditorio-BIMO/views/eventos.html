@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../css/mainstyles.css">
+    <link rel="stylesheet" href="../css/dist/styles/jquery.carousel-3d.default.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+    <link href="../css/enjoyhint.css" rel="stylesheet"> 
+    
+    <!--<script src="http://localhost:35729/livereload.js"></script>-->
+    <script src="../js/globalconfig.js"></script>
+    <script src="../lib/bower_components/jquery/jquery.js"></script>
+    <script src="../lib/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+    <script src="../lib/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+    <script src="../lib/bower_components/modernizr/modernizr.js"></script>
+    <script src="../lib/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+    <script src="../js/ajax/eventos.js" type="text/javascript"></script>
+    <script src="../js/eventos.js" type="text/javascript"></script>
+    <style>
+        html,
+        body {
+            margin: 0px;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+        * {
+            font-family: "Open Sans", sans-serif !important;
+        }
+
+        select{
+            width: 60%;
+            height: 35px;
+            padding-left: 15%;
+            font-weight: 20px; 
+        }
+
+        .selectFunciones {
+            font-size: 14pt;
+            width: 260px;
+        }
+    </style>
+</head>
+
+<body id="fondo">
+    <div class="hero-container">
+        <div class="wrapper">
+            <div data-carousel-3d id="carousel-container">
+            <!-- content injected by js -->       
+            </div>
+        </div> 
+         <img id="helpbutton" onclick="ayuda_eventos()"  class="helpbutton" src="../img/helpbtn.png">
+         <audio id="audio" src="../audio/eventos.mp3" ></audio>
+        <a href="../index.html" class="btn"><i class="fas fa-home fa-4x"></i><br> Regresar</a>
+    
+    </div>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+    </script>
+</body> 
+
+<script src="../js/main.js"></script> 
+<script src="../js/enjoyhint.min.js"></script>
+
+</html>

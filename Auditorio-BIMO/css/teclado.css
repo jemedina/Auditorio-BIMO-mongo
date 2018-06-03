@@ -1,0 +1,41 @@
+
+#kb_keypad{
+    border:solid 1px black;
+    display:block;
+    position:fixed;
+    display: none;
+}
+.kb_key{
+    border:solid 1px black;
+    background-color: rgba(30,30,30,0.98);
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    width: 120px;
+    height: 80px;
+}
+
+.kb_key, .kb_btn {
+    font-size: 25px;
+}
+.kb_key:hover{
+    background-color:LightBlue;
+}
+.kb_key:active{
+    background-color:white;
+}
+.kb_btn{
+    border:solid 1px black;
+    text-align:center;
+    font-weight:bold;
+    color:black;
+    cursor:pointer;
+    background-color:DimGray;
+}
+.kb_btn:hover{
+    background-color:DarkGray;
+}
+.kb_btn:active{
+    background-color:LightGray;
+}
