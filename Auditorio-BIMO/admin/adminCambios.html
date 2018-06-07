@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap4.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	    <span class="navbar-brand mb-0 h1">Administración</span>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="adminAltas.html">Altas</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="adminCambios.html">Cambios</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<section class="container mt-5">
+		<h1 class="h1 col-8 offset-4 ">Funciones</h1>
+		<form>
+		  <div class="form-group row">
+		    <label for="inputFolio" class="col-sm-2 col-form-label mt-3">Folio</label>
+		    <div class="col-sm-10">
+		    	<select id="selectFolio" class="custom-select">
+			  		<option selected="">Selecciona  folio de evento</option>
+				</select>
+		    </div>
+		    <label for="inputID" class="col-sm-2 col-form-label mt-3">ID</label>
+		    <div class="col-sm-10">
+		    	<select id="selectFunciones" class="custom-select">
+			  		<option selected="">Selecciona una función</option>
+				</select>
+		    </div>		    
+		    <div class="col-sm-10 offset-sm-2 mt-3">
+		      <button type="submit" class="btn btn-block btn-primary">Buscar</button>
+		    </div>	
+
+		    <label for="inputFecha" class="col-sm-2 col-form-label mt-3">Fecha</label>
+		    <div class="col-sm-10">
+		      <input type="date" class="form-control mt-3" id="inputFecha" placeholder="Fecha">
+		    </div>
+		    <label for="inputHorario" class="col-sm-2 col-form-label mt-3">Horario</label>
+		    <div class="col-sm-10">
+		      <input type="time" class="form-control mt-3" id="inputHorario" placeholder="Horario">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		  	<div class="col-sm-5 offset-sm-1">
+		      <button type="submit" class="btn btn-block btn-danger" id="EliminarFunc" disabled>Eliminar</button>
+		    </div>
+		    <div class="col-sm-5 offset-sm-1">
+		      <button type="submit" class="btn btn-block btn-primary" id="ScambiosFunc" disabled>Guardar Cambios</button>
+		  </div>		 	
+		</form>		
+		</div>
+	</section>
+
+		<section class="container mt-5">
+		<h1 class="h1 col-8 offset-4 ">Promos</h1>
+		<form>
+		  <div class="form-group row">
+		    <label for="inputNoPromo" class="col-sm-2 col-form-label mt-3">No. Promoción</label>
+		    <div class="col-sm-10">
+		    	<select id="selectPromos" class="custom-select">
+					<option selected="">Selecciona una promoción</option>
+				</select>
+		    </div>	
+
+		    <div class="col-sm-10 offset-sm-2 mt-3">
+		      <button type="submit" class="btn btn-block btn-primary">Buscar</button>
+		    </div>
+
+		    <label for="inputDesc" class="col-sm-2 col-form-label mt-3">Descripción</label>
+		    <div class="col-sm-10">
+		      <textarea class="form-control mt-3" maxlength="200" id="inputDesc" rows="3"></textarea>
+		    </div>
+		    <label for="inputFinicio" class="col-sm-2 col-form-label mt-3">Inicio</label>
+		    <div class="col-sm-10">
+		      <input type="date" class="form-control mt-3" id="inputFinicio" placeholder="Fecha Inicio">
+		    </div>
+
+		    <label for="inputFfin" class="col-sm-2 col-form-label mt-3">Final</label>
+		    <div class="col-sm-10">
+		      <input type="date" class="form-control mt-3" id="inputf_final" placeholder="Fecha fin">
+		    </div>
+
+		    <label for="inputDescuento" class="col-sm-2 col-form-label mt-3">Descuento</label>
+		    <div class="col-sm-10">
+		      <input type="number" max="99" min="0" class="form-control mt-3" id="inputDescuento" placeholder="Porcentaje de descuento">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		  	<div class="col-sm-5 offset-sm-1">
+		      <button type="submit" class="btn btn-block btn-danger" id="EliminarPromo" disabled>Eliminar</button>
+		    </div>
+		    <div class="col-sm-5 offset-sm-1">
+		      <button type="submit" class="btn btn-block btn-primary" id="ScambiosPromo" disabled>Guardar Cambios</button>
+		    </div>		 	
+		</form>		
+		</div>
+	</section>
+
+
+	<script src="../lib/jquery/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="../lib/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

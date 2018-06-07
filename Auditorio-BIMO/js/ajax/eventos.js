@@ -16,6 +16,20 @@ var Eventos = (function($) {
         });
     }
 
+    var addfuncion = function(folio, id_funcion, fecha, hora, cb) {
+        $.ajax({
+            url: `${GlobalConfig.host}:${port}/${endpoint}/addfuncion/${folio}/${id_funcion}/${fecha}/${hora}${apikey}`,
+            method: "get",
+            async: true,
+            success: function(data) {
+                cb(data);
+            },
+            error: function(err) {
+                console.log("Error in addfuncion ", err);
+            }
+        });
+    }
+
     var eventosPorFolioArtista = function(folio_artista, cb) {
         var eventosByFolioEndpoint = `${GlobalConfig.host}:${port}/${endpoint}/datos_eventos/${folio_artista}?api_key=${GlobalConfig.apikey}`;
         $.ajax({
@@ -130,6 +144,7 @@ var Eventos = (function($) {
         eventosReservadosPorTitular: eventosReservadosPorTitular,
         datosEventos: datosEventos,
         getDatos: getDatos,
-        funcAsociadas: funcAsociadas
+        funcAsociadas: funcAsociadas,
+        addfuncion: addfuncion
     }
 })(jQuery);
