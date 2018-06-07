@@ -16,8 +16,23 @@ var Promociones = (function($) {
         });
     }
 
+    var addpromo = function(no_promo, descrip, f_inicio, f_final, descuento, cb) {
+        $.ajax({
+            url: `${GlobalConfig.host}:${port}/${endpoint}/addpromo/${no_promo}/${descrip}/${f_inicio}/${f_final}/${descuento}${apikey}`,
+            method: "get",
+            async: true,
+            success: function(data) {
+                cb(data);
+            },
+            error: function(err) {
+                console.log("Error in addfuncion ", err);
+            }
+        });
+    }
+
 
     return {
-        getAll: getAll
+        getAll: getAll,
+        addpromo: addpromo
     }
 })(jQuery);

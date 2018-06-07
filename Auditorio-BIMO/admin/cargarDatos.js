@@ -1,11 +1,18 @@
 (function(){
     $(document).ready(function () {
 
-        //Cargar select/option para los eventos:
+        //Campos para agregar funciones
         var folioEventoSelect = $("#inputFolioEvento");
         var inputID = $("#inputID");
         var inputFecha = $("#inputFecha");
         var inputHorario = $("#inputHorario");
+
+        //Campos para agregar promociones
+        var inputNoPromo = $("#inputNoPromo");
+        var inputDesc = $("#inputDesc");
+        var inputFinicio = $("#inputFinicio");
+        var inputf_final = $("#inputf_final");
+        var inputDescuento = $("#inputDescuento");
         
         if(folioEventoSelect.length) {
             Eventos.getAll(function(resp) {
@@ -30,6 +37,29 @@
                 });
             });
         }
+        
+        if(inputNoPromo.length) {
+            $("#addPromoBtn").click(function(evt){
+                evt.preventDefault()
+                Promociones.addpromo(inputNoPromo.val(), inputDesc.val(), inputFinicio.val(), inputf_final.val(),inputDescuento.val(), function(resp){
+                    if(resp == true){
+                        alert("Promocion agregada correctamente!");
+                        inputNoPromo.val('');
+                        inputDesc.val('');
+                        inputFinicio.val('');
+                        inputf_final.val('');
+                        inputDescuento.val('');
+                    }
+                });
+            });
+        }
+
+
+        $("#genBtn").click(function(e){
+            e.preventDefault();
+            var numero = Math.floor(Math.random()*1000000 + 1000);
+            $("#inputNoPromo").val(numero);
+        });
     });
 
     function cargaFolioFunciones(folios) {

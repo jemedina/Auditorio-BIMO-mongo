@@ -61,13 +61,10 @@
 		<form>
 		  <div class="form-group row">
 		    <label for="inputNoPromo" class="col-sm-2 col-form-label mt-3">No. Promoción</label>
-		    <div class="col-sm-10">
+		    <div class="col-sm-9">
 		      <input type="number" min="0" class="form-control mt-3" id="inputNoPromo" placeholder="Numero de promoción">
-		    </div>
-		    <label for="inputFolioPromo" class="col-sm-2 col-form-label mt-3">Folio</label>
-		    <div class="col-sm-10">
-		      <input type="number" class="form-control mt-3" id="inputFolioPromo" placeholder="Folio">
-		    </div>
+				</div>
+				<button id="genBtn" class="btn btn-success">Generar</button>
 		    <label for="inputDesc" class="col-sm-2 col-form-label mt-3">Descripción</label>
 		    <div class="col-sm-10">
 		      <textarea class="form-control mt-3" maxlength="200" id="inputDesc" rows="3"></textarea>
@@ -79,7 +76,7 @@
 
 		    <label for="inputFfin" class="col-sm-2 col-form-label mt-3">Final</label>
 		    <div class="col-sm-10">
-		      <input type="date" class="form-control mt-3" id="inputFinicio" placeholder="Fecha fin">
+		      <input type="date" class="form-control mt-3" id="inputf_final" placeholder="Fecha fin">
 		    </div>
 
 		    <label for="inputDescuento" class="col-sm-2 col-form-label mt-3">Descuento</label>
@@ -89,7 +86,7 @@
 		  </div>
 		  <div class="form-group row">
 		    <div class="col-sm-10 offset-sm-2">
-		      <button type="submit" class="btn btn-block btn-primary">Dar de alta</button>
+		      <button id="addPromoBtn" type="submit" class="btn btn-block btn-primary">Dar de alta</button>
 		    </div>		 	
 		</form>		
 		</div>
@@ -100,6 +97,7 @@
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/globalconfig.js"></script>
 <script src="../js/ajax/eventos.js"></script>
+<script src="../js/ajax/promociones.js"></script>
 <script src="cargarDatos.js"></script>
 </body>
 </html>
