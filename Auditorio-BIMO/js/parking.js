@@ -76,8 +76,11 @@ $(document).ready(function() {
 
         //Cargar cajones ocupados
         var url = new URL(window.location.href);
-        var funcion_id = url.searchParams.get("funcion_id"),
-        cardNumber = url.searchParams.get("cardNumber");
+        var funcion_id = url.searchParams.get("funcion_id");
+        if(url.searchParams.get("no_tarjeta"))
+            cardNumber = url.searchParams.get("no_tarjeta");
+        else
+            cardNumber = url.searchParams.get("cardNumber");
 
         if(funcion_id) {
             Parking.cajonesPorFuncion(funcion_id, function(resp) {

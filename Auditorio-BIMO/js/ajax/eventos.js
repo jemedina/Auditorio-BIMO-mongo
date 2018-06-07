@@ -1,10 +1,10 @@
 var Eventos = (function($) {
     var apikey = "?api_key=" + GlobalConfig.apikey;
-    var port = "5000";
-    var endpoint = "funciones";
+    var port = "443";
+    var endpoint = "eventosapi";
     var getAll = function(cb) {
         $.ajax({
-            url: `${GlobalConfig.host}:${port}/${endpoint}/all`,
+            url: `${GlobalConfig.host}:${port}/${endpoint}/all${apikey}`,
             method: "get",
             async: true,
             success: function(data) {

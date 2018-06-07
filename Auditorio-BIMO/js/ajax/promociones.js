@@ -1,7 +1,7 @@
 var Promociones = (function($) {
     var apikey = "?api_key=" + GlobalConfig.apikey;
-    var port = "5001";
-    var endpoints = "promos";
+    var port = "443";
+    var endpoint = "promosapi";
     var getAll = function(cb) {
         $.ajax({
             url:  `${GlobalConfig.host}:${port}/${endpoint}/all?api_key=${GlobalConfig.apikey}`,

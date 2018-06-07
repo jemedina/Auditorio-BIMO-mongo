@@ -1,7 +1,7 @@
 var Parking = (function($) {
     var apikey = "?api_key=" + GlobalConfig.apikey;
-    var port = "5002";
-    var endpoint = "cajones";
+    var port = "443";
+    var endpoint = "parkingapi";
     var cajonesPorFuncion = function(funcion_id, cb) {
         $.ajax({
             url:  `${GlobalConfig.host}:${port}/${endpoint}/cajones-ocupados/${funcion_id}`+ apikey
