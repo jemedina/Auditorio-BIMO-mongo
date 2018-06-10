@@ -39,10 +39,7 @@
 		    	<select id="selectFunciones" class="custom-select">
 			  		<option selected="">Selecciona una función</option>
 				</select>
-		    </div>		    
-		    <div class="col-sm-10 offset-sm-2 mt-3">
-		      <button type="submit" class="btn btn-block btn-primary">Buscar</button>
-		    </div>	
+		    </div>
 
 		    <label for="inputFecha" class="col-sm-2 col-form-label mt-3">Fecha</label>
 		    <div class="col-sm-10">
@@ -55,10 +52,10 @@
 		  </div>
 		  <div class="form-group row">
 		  	<div class="col-sm-5 offset-sm-1">
-		      <button type="submit" class="btn btn-block btn-danger" id="EliminarFunc" disabled>Eliminar</button>
+		      <button type="submit" class="btn btn-block btn-danger" id="EliminarFunc">Eliminar</button>
 		    </div>
 		    <div class="col-sm-5 offset-sm-1">
-		      <button type="submit" class="btn btn-block btn-primary" id="ScambiosFunc" disabled>Guardar Cambios</button>
+		      <button type="submit" class="btn btn-block btn-primary" id="ScambiosFunc">Guardar Cambios</button>
 		  </div>		 	
 		</form>		
 		</div>
@@ -74,10 +71,6 @@
 					<option selected="">Selecciona una promoción</option>
 				</select>
 		    </div>	
-
-		    <div class="col-sm-10 offset-sm-2 mt-3">
-		      <button type="submit" class="btn btn-block btn-primary">Buscar</button>
-		    </div>
 
 		    <label for="inputDesc" class="col-sm-2 col-form-label mt-3">Descripción</label>
 		    <div class="col-sm-10">
@@ -100,18 +93,23 @@
 		  </div>
 		  <div class="form-group row">
 		  	<div class="col-sm-5 offset-sm-1">
-		      <button type="submit" class="btn btn-block btn-danger" id="EliminarPromo" disabled>Eliminar</button>
+		      <button type="submit" class="btn btn-block btn-danger" id="EliminarPromo">Eliminar</button>
 		    </div>
 		    <div class="col-sm-5 offset-sm-1">
-		      <button type="submit" class="btn btn-block btn-primary" id="ScambiosPromo" disabled>Guardar Cambios</button>
+		      <button type="submit" class="btn btn-block btn-primary" id="ScambiosPromo">Guardar Cambios</button>
 		    </div>		 	
 		</form>		
 		</div>
 	</section>
 
 
-	<script src="../lib/jquery/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="../lib/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="../lib/bootstrap/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<script src="../lib/jquery/jquery.min.js"></script>
+	<script src="../lib/popper.min.js"></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="../js/globalconfig.js"></script>
+	<script src="../js/ajax/eventos.js"></script>
+	<script src="../js/ajax/promociones.js"></script>
+	<script src="cargarDatos.js"></script>
 </body>
 </html>

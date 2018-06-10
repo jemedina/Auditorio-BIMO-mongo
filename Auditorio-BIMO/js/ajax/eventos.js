@@ -15,6 +15,19 @@ var Eventos = (function($) {
             }
         });
     }
+    var delfuncion = function(folio, id_funcion, cb) {
+        $.ajax({
+            url: `${GlobalConfig.host}:${port}/${endpoint}/delfuncion/${folio}/${id_funcion}${apikey}`,
+            method: "get",
+            async: true,
+            success: function(data) {
+                cb(data);
+            },
+            error: function(err) {
+                console.log("Error in delfuncion ", err);
+            }
+        });
+    }
 
     var addfuncion = function(folio, id_funcion, fecha, hora, cb) {
         $.ajax({
@@ -26,6 +39,20 @@ var Eventos = (function($) {
             },
             error: function(err) {
                 console.log("Error in addfuncion ", err);
+            }
+        });
+    }
+
+    var updatefuncion = function(folio, id_funcion, fecha, hora, cb) {
+        $.ajax({
+            url: `${GlobalConfig.host}:${port}/${endpoint}/cambio-funcion/${folio}/${id_funcion}/${fecha}/${hora}${apikey}`,
+            method: "get",
+            async: true,
+            success: function(data) {
+                cb(data);
+            },
+            error: function(err) {
+                console.log("Error in updatefuncion ", err);
             }
         });
     }
@@ -145,6 +172,8 @@ var Eventos = (function($) {
         datosEventos: datosEventos,
         getDatos: getDatos,
         funcAsociadas: funcAsociadas,
-        addfuncion: addfuncion
+        addfuncion: addfuncion,
+        delfuncion: delfuncion,
+        updatefuncion: updatefuncion
     }
 })(jQuery);

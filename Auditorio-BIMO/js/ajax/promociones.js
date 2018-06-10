@@ -30,9 +30,39 @@ var Promociones = (function($) {
         });
     }
 
+    var updatepromo = function(no_promo, descrip, f_inicio, f_final, descuento, cb) {
+        $.ajax({
+            url: `${GlobalConfig.host}:${port}/${endpoint}/updatepromo/${no_promo}/${descrip}/${f_inicio}/${f_final}/${descuento}${apikey}`,
+            method: "get",
+            async: true,
+            success: function(data) {
+                cb(data);
+            },
+            error: function(err) {
+                console.log("Error in updatepromo ", err);
+            }
+        });
+    }
+
+    var delpromo = function(no_promo, cb) {
+        $.ajax({
+            url: `${GlobalConfig.host}:${port}/${endpoint}/delpromo/${no_promo}${apikey}`,
+            method: "get",
+            async: true,
+            success: function(data) {
+                cb(data);
+            },
+            error: function(err) {
+                console.log("Error in delpromo ", err);
+            }
+        });
+    }
+
 
     return {
         getAll: getAll,
-        addpromo: addpromo
+        addpromo: addpromo,
+        updatepromo: updatepromo,
+        delpromo: delpromo
     }
 })(jQuery);
